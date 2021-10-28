@@ -28,12 +28,13 @@ public class Main {
 
         times = 6;
 
-        while(times > 5){
+        while(times > 5) {
             System.out.print("How many cards would you like? (1..5) ");
             times = scanner.nextInt();
-            if(times > 5){
+            if (times > 5) {
                 System.out.println("That is not a valid amount");
             }
+        }
 
             for(int x = 0; x < times; x++){
                 Random random = new Random();
@@ -41,7 +42,5 @@ public class Main {
                 System.out.println(cards[cardToPrint]);
 
             }
-        }
-
     }
 }
