@@ -22,24 +22,25 @@ public class Main {
 
             for(int y = 0; y < ranks.length; y++){
                 cards[times] = new Card(suits[x],ranks[y]);
-                times ++;
+                times++;
             }
         }
 
-        times = 6;
+        int cardCount = 6;
 
-        while(times > 5) {
+        while(cardCount > 5) {
             System.out.print("How many cards would you like? (1..5) ");
-            times = scanner.nextInt();
-            if (times > 5) {
+            cardCount = scanner.nextInt();
+            if (cardCount > 5) {
                 System.out.println("That is not a valid amount");
             }
         }
 
-            for(int x = 0; x < times; x++){
+        Card[] selectCards = new Card[cardCount];
+            for(int x = 0; x < cardCount; x++){
                 Random random = new Random();
-                int cardToPrint = random.nextInt(cards.length);
-                System.out.println(cards[cardToPrint]);
+                selectCards[x] = cards[random.nextInt(cards.length)];
+                System.out.println(selectCards[x]);
 
             }
     }
